@@ -5,9 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ali Portfolio</title>
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    
+    <!-- Bootsrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -19,134 +25,151 @@
     </div>
 
 
-    <div class="aboutme parent">
+    <div class="aboutme">
 
-        <img src="./src/Ali Laptop.png" alt="Me Saying Hi Sticker">
+        <img src="./src/Ali Laptop.png" alt="Me Saying Hi Sticker" id="mySticker">
 
-        <div class="containerLeft">
-            <h2>Hi, Im Ali, a web developer based in Jakarta</h2>
-            <div class="getInTouch">
-                <button>Here Is My CV</button>
-                <a href="https://github.com/alihadimusawa"><img src="./src/github Icon.png" alt="github Icon"></a>
-                <a href="https://www.linkedin.com/in/alimusawa"><img src="./src/linkedIn Icon.png" alt="LinkedIn Icon">
-                </a>
-                <a href="alihadishp@gmail.com"><img src="./src/email icon.png" alt="Email Icon"></a>
+        <div class="aboutMeContainer">
+            <div class="containerLeft">
+                <h2>Hi, Im Ali, a web developer based in Jakarta</h2>
+                <div class="getInTouch">
+                    <button>Here Is My CV</button>
+                    <div class="social">
+                        <a href="https://github.com/alihadimusawa"><img src="./src/github Icon.png" alt="github Icon"></a>
+                        <a href="https://www.linkedin.com/in/alimusawa"><img src="./src/linkedIn Icon.png" alt="LinkedIn Icon">
+                        </a>
+                        <a href="alihadishp@gmail.com"><img src="./src/email icon.png" alt="Email Icon"></a>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="containerRight">
-            I’m skilled in both front-end and back-end development. I have worked on various individual and group
-            projects and gained valuable organizational experience.
+    
+            <div class="containerRight">
+                I’m skilled in both front-end and back-end development. I have worked on various individual and group
+                projects and gained valuable organizational experience.
+            </div>
         </div>
 
     </div>
 
-    <div class="proficiency">
+    <div class="proficiency parent">
         <h2>Technical Proficiency</h2>
+
         <div class="skillContainer">
-            <div class="skill">
-                <p>HTML</p>
-                <img src="./src/html.png" alt="">
-            </div>
-            <div class="skill">
-                <p>CSS</p>
-                <img src="./src/css.png" alt="">
-            </div>
-            <div class="skill">
-                <p>Java Script</p>
-                <img src="./src/js.png" alt="">
-            </div>
-            <div class="skill">
-                <p>Node.js</p>
-                <img src="./src/node js.svg" alt="">
-            </div>
-            <div class="skill">
-                <p>Express.js</p>
-                <img src="./src/express js.png" alt="">
-            </div>
-            <div class="skill">
-                <p>React.js</p>
-                <img src="./src/react js.png" alt="">
-            </div>
-            <div class="skill">
-                <p>Python</p>
-                <img src="./src/python logo.svg" alt="">
-            </div>
-            <div class="skill">
-                <p>Java</p>
-                <img src="./src/java.png" alt="">
-            </div>
-            <div class="skill">
-                <p>C++</p>
-                <img src="./src/c++ logo.png" alt="">
-            </div>
-            <div class="skill">
-                <p>Laravel</p>
-                <img src="./src/laraver.png" alt="">
-            </div>
-            <div class="skill">
-                <p>MySQL</p>
-                <img src="./src/my sql.png" alt="">
-            </div>
-            <div class="skill">
-                <p>PostgreSQL</p>
-                <img src="./src/postgresql.png" alt="">
-            </div>
+            
+                <div class="col">
+                    <p>HTML</p>
+                    <img src="./src/html.png" alt="">
+                </div>
+                <div class="col">
+                    <p>CSS</p>
+                    <img src="./src/css.png" alt="">
+                </div>
+                <div class="col">
+                    <p>Java Script</p>
+                    <img src="./src/js.png" alt="">
+                </div>
+                <div class="col">
+                    <p>Node.js</p>
+                    <img src="./src/node js.png" alt="">
+                </div>
+                <div class="col">
+                    <p>Express.js</p>
+                    <img src="./src/express js.png" alt="">
+                </div>
+                <div class="col">
+                    <p>React.js</p>
+                    <img src="./src/react js.png" alt="">
+                </div>
+
+                <div class="col">
+                    <p>Python</p>
+                    <img src="./src/python.png" alt="">
+                </div>
+                <div class="col">
+                    <p>Java</p>
+                    <img src="./src/java.png" alt="">
+                </div>
+                <div class="col">
+                    <p>C++</p>
+                    <img src="./src/c++ logo.png" alt="">
+                </div>
+                <div class="col">
+                    <p>Laravel</p>
+                    <img src="./src/laraver.png" alt="">
+                </div>
+                <div class="col">
+                    <p>MySQL</p>
+                    <img src="./src/mysql.png" alt="">
+                </div>
+                <div class="col">
+                    <p>PostgreSQL</p>
+                    <img src="./src/postgresql.png" alt="">
+                </div>
         </div>
+        
     </div>
 
     <div class="workingBenefit parent">
         <h2>Benefit of Working With Me</h2>
         <div class="benefits">
-
-            <div class="benefitContainer">
-                <h5>I Write a Clean, Understandable, and Easy to maintain Code</h5>
-                <div id="monaco-editor"></div>
+            <div>
+                <div class="benefitContainer">
+                    <h5>I Write a Clean, Understandable, and Easy to maintain Code</h5>
+                    <div id="monaco-editor"></div>
+                </div>
             </div>
-
-        </div>
-
-        <div class="benefits">
-            <div class="benefitContainer">
-
-                <h5>Strong Collaboration and Effective Communication Skills.</h5>
-
-                <div class="experience">
-                    <img src="./src/himti.png" alt="">
-                    2 years experience in Himpunan Teknik Informatika Universitas Bina Nusantara (HIMTI)
+    
+            <div>
+                <div class="benefitContainer">
+    
+                    <h5>Strong Collaboration and Effective Communication cols.</h5>
+                    
+                    <div>
+                        <div class="experience">
+                            <img src="./src/himti.png" alt="">
+                            2 years experience in Himpunan Teknik Informatika Universitas Bina Nusantara (HIMTI)
+                        </div>
+        
+                        <div class="experience">
+                            One year of experience as a Freshmen Leader, overseeing and mentoring over 60 first-year students
+                            throughout the academic year
+                            <img src="./src/binus.png" alt="" id="binus">
+                        </div>
+        
+                        <div class="experience">
+                            <img src="./src/osis.png" alt="">
+                            One year of experience in the Student Council (OSIS), a school-based student organization
+                        </div>
+                    </div>
                 </div>
-
-                <div class="experience">
-                    <img src="./src/binus.png" alt="">
-                    One year of experience as a Freshmen Leader, overseeing and mentoring over 60 first-year students
-                    throughout the academic year
+            </div>
+    
+            <div>
+    
+                <div class="benefitContainer">
+                    <h5>Familiarity with Latest Technology</h5>
+    
+                    <div class="technologyContainer" id="technology">
+                        <div id="left"> 
+                            <img src="./src/github.png" alt="">
+                            <img src="./src/postman.png" alt="">
+                            <img src="./src/figma.png" alt="">
+                        </div>
+                        <div id="right">
+                            <img src="./src/cisco.png" alt="" style="width: 70% !important;">
+                            <img src="./src/visual studio.png" alt="" style="width: 70% !important;">
+                            <img src="./src/npm.png" alt="" style="width: 60% !important;">
+                            <img src="./src/visual studio code.png" alt="" style="width: 130% !important;">
+                        </div>
+                    </div>
                 </div>
-
-                <div class="experience">
-                    <img src="./src/himti.png" alt="">
-                    One year of experience in the Student Council (OSIS), a school-based student organization
-                </div>
-
+    
             </div>
         </div>
-
-        <div class="benefits">
-
-            <div class="benefitContainer">
-                <h5>Familiarity with Latest Technology</h5>
-
-                <div class="technologyContainer">
-                    <img src="./src/github.png" alt="">
-                    <img src="./src/postman.png" alt="">
-                    <img src="./src/figma.png" alt="">
-                </div>
-
-            </div>
-
-        </div>
+        
     </div>
 
-    <div class="projectShowcase">
+    <div class="projectShowcase parent">
 
         <h1>PROJECT SHOWCASE</h1>
 
@@ -162,7 +185,7 @@
                     <button><img src="./src/code icon.png" alt="">Code</button>
                     <button><img src="./src/design icon.png" alt="">Figma</button>
                 </div>
-                <img src="./src/babon project.png" alt="">
+                <img src="./src/babon project.png" alt="" class="myProject">
             </div>
 
             <div class="projectContainer">
@@ -174,7 +197,7 @@
                     <button><img src="./src/code icon.png" alt="">Code</button>
                     <button><img src="./src/design icon.png" alt="">Figma</button>
                 </div>
-                <img src="./src/360++ personal book notes.png" alt="">
+                <img src="./src/360++ personal book notes.png" alt="" class="myProject">
             </div>
 
             <div class="projectContainer">
@@ -182,9 +205,9 @@
                 <p>Permalist is a simple to-do list application that allows users to manage their tasks effectively.
                     Built with Node.js, Express.js, PostgreSQL, and EJS, Permalist provides a user-friendly interface to
                     add, edit, and delete tasks.</p>
-                <button><img src="./src/code icon.png" alt="">Code</button>
+                <button class="buttonOutsideContainer"><img src="./src/code icon.png" alt="">Code</button>
 
-                <img src="./src/permalist.png" alt="">
+                <img src="./src/permalist.png" alt="" class="myProject">
             </div>
 
             <div class="projectContainer">
@@ -194,9 +217,9 @@
                     Users can manage their profile and add new countries they have visited. The application also
                     supports
                     adding new family members with different colors for easier identification.</p>
-                <button><img src="./src/code icon.png" alt="">Code</button>
+                <button class="buttonOutsideContainer"><img src="./src/code icon.png" alt="">Code</button>
 
-                <img src="./src/family tracker.png" alt="">
+                <img src="./src/family tracker.png" alt="" class="myProject">
             </div>
 
             <div class="projectContainer">
@@ -204,18 +227,18 @@
                 <p>Simon Game, a web-based recreation of the classic memory game "Simon." In this game, players must
                     memorize and repeat a sequence of colors generated by the computer. The sequence gets longer with
                     each round, testing the player's memory.</p>
-                <button><img src="./src/simon game.png icon.png" alt="">Code</button>
+                <button class="buttonOutsideContainer"><img src="./src/code icon.png" alt="">Code</button>
 
-                <img src="./src/simon game.png" alt="">
+                <img src="./src/simon game.png" alt="" class="myProject">
             </div>
 
             <div class="projectContainer">
                 <h3>Drum Kit</h3>
                 <p>Drum Kit. It is a fun and interactive web-based app that allows users to play drum sounds by either
                     clicking on the on-screen drum buttons or pressing the corresponding keyboard keys.</p>
-                <button><img src="./src/code icon.png" alt="">Code</button>
+                <button class="buttonOutsideContainer"><img src="./src/code icon.png" alt="">Code</button>
 
-                <img src="./src/drum kit.png" alt="">
+                <img src="./src/drum kit.png" alt="" class="myProject">
             </div>
 
         </div>
@@ -223,8 +246,16 @@
 
     </div>
 
+
+    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.34.1/min/vs/loader.js"></script>
     <script src="./indes.js"></script>
+
+    <!-- Boostrap Script -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
 

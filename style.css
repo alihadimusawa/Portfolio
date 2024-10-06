@@ -5,12 +5,16 @@ img{
 
 
 #monaco-editor {
-    width: 100%; /* Ensures the editor uses the full container width */
-    max-width: 600px; /* Optional: Set a max width to prevent overflow */
     border: 1px solid #ddd;
     overflow: hidden; /* Prevent overflow issues */
     resize: none; /* Prevent resizing */
     margin: 20px 0;
+    height: 80%;
+    text-align: start !important;
+    border-radius: 20px;
+    /* position: absolute;
+    width: 28%;
+    left: 2.6%; */
 }
 
 body{
@@ -20,15 +24,417 @@ body{
     gap: 1000px;
     display: flex;
     flex-direction: column;
-    padding: 100px;
+    padding: 150px;
+    width: 100%;
+}
+
+.parent{
+    position: relative;
+}
+
+.parent h2{
+    position: absolute;
+    top: -7%;
+    font-size: 5vw;
+    text-align: center;
+    width: 100%;
+    letter-spacing: 2px;
 }
 
 * {
     font-family: "DM Serif Display", system-ui;
-    font-weight: 400;
+    font-weight: 200;
     font-style: normal;
+    color: #D9D9D9;
 }
 
+
+
+/* Title */
 .title{
-    background-color: ;
+    margin-top: 20vh;
+    width: 100%;
+    background-color: #4A4A4A;
+    border-radius: 20px;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.title > h1{
+    font-size: 7vw;
+    position: absolute;
+    top: -50%;
+    letter-spacing: 5px;
+}
+
+.title > h3{
+    font-size: 2vw;
+    font-weight: lighter !important; 
+    margin-top: 5%;
+    letter-spacing: 1.5px;
+}
+
+/* About Me */
+
+.aboutme{
+    background-color: #4A4A4A;
+    border-radius: 20px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#mySticker{
+    width: 35vw !important;
+    height: auto;
+    position: absolute;
+    top: -90%;
+    left: 25%;
+    margin: auto;
+}
+
+.aboutMeContainer{
+    display: flex;
+    flex-direction: row;
+    margin-top: 13vh;
+    gap: 5vw;
+    width: 100%;
+    margin-bottom: 5vh;
+}
+
+.containerLeft{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50% !important;
+    box-sizing: border-box;
+}
+
+.getInTouch{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.social{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 35%;
+    margin-left: auto;
+    margin-right: 10%;
+}
+
+.getInTouch img{
+    width: 3vw;
+    height: auto;
+}
+
+.getInTouch button{
+    width: 12vw;
+    height: 100%;
+    width: 40%;
+    border-radius: 100px;
+    color: #4A4A4A;
+    cursor: pointer;
+    border: 1px solid #D9D9D9;
+    transition-duration: 0.5s;
+    font-size: 1.3vw;
+}
+
+.getInTouch button:hover{
+    transition-duration: 0.5s;
+    background-color: #4A4A4A;
+    color: #D9D9D9;
+}
+
+.containerLeft > h2{
+    font-size: 4vw;
+    margin-top: 0;
+}
+
+.containerRight{
+    width: 50%;
+    background-color:#D9D9D9;
+    color: #4A4A4A;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    padding: 2vw;
+    text-align: center;
+    font-weight: lighter !important;
+}
+
+
+
+/* Tehcnical profciency */
+
+.proficiency{
+    background-color: #4A4A4A;
+    text-align: center;
+    position: relative;
+    border-radius: 20px;
+    width: 100%;
+    height: 80vh;
+    align-content: center;
+}
+
+.proficiency img{
+    width: 5vw;
+    height: auto;
+    position: absolute;
+    top: 15vh;
+    right: 0.5vw;
+    
+}   
+
+.skillContainer{
+    display: grid;
+    grid-template-columns: repeat(6,6vw);
+    grid-template-rows: repeat(2, 2vh);
+    width: 100%;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30vh;
+    column-gap: 9%;
+}
+
+.col{
+    position: relative;
+}
+
+.proficiency p{
+    font-size: 1.2vw;
+    color: #4A4A4A;
+    position: absolute;
+    width: 120%;
+    border-radius: 100px;
+    right: -10%;
+    margin-top: 10vh;
+    background-color: #D9D9D9;
+}
+
+/* Benefit of working with me */
+.workingBenefit{
+    background-color: #4A4A4A;
+    text-align: center;
+    position: relative;
+    border-radius: 20px;
+    width: 100%;
+    height: 100vh;
+    align-content: center;
+}
+
+.benefits{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.benefitContainer{
+    height: 80%;
+    margin-top: auto;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    justify-content: center;
+    width: 23vw;
+    padding: 4%;
+    height: 80vh;
+}
+
+.benefitContainer > h5{
+    text-align: left;
+    font-size: 1.5vw;
+    color: #4A4A4A;
+    margin: 1vw;
+    margin-bottom: 0;
+    height: 10vh;
+}
+
+.experience{
+    width: 100%;
+    height: 15vh;
+    border-radius: 50px;
+    background-color: #4A4A4A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+    gap: 1vw;
+}
+.benefitContainer > div, #technology{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    height: 90%;
+    gap: 7%;
+    font-size: 0.8vw;
+}
+
+.experience img{
+    width: 5vw;
+    float: left;
+    height: auto;
+    border-radius: 50%;
+}
+
+#technology img{
+    width: 100%;
+    height: auto;
+    align-self: center;
+}
+
+#technology div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 50%;
+}
+
+#technology{
+    gap: 12%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+#left{
+    justify-content: space-around !important;
+    width: 50% !important;
+}
+
+#left img{
+    width: 120%;
+}
+
+#right{
+    height: 90% !important;
+}
+
+.technologyContainer{
+    padding: 10% !important;
+}
+
+
+
+/* Project Showcase */
+.projectShowcase > h1{
+    font-size: 7vw;
+    text-align: center;
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+}
+
+.projectContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: #D9D9D9;
+    text-align: center;
+    padding: 0;
+    padding-top: 5%;
+    border-radius: 20px;
+    height: 90%;
+}
+
+.projectContainer *{
+    color: #4A4A4A !important;
+}
+
+.projectContainer h3{
+    font-size: 2vw;
+    margin: 0;
+    padding: 0;
+}
+
+.projectContainer p{
+    font-size: 1.2vw;
+    padding:6% 6% 2% 6%;
+}
+
+
+.projectButtonContainer{
+    width: 50%;
+    font-size: 1vw;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+
+.projectContainer button{
+    background-color: #D9D9D9;
+    border: #4A4A4A;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #4A4A4A;
+    border-radius: 5px;
+    transition-duration: 0.5s;
+    width: 40%;
+}
+
+.projectButtonContainer button{
+    width: 40% !important;
+}
+
+.projectContainer button:hover{
+    border-radius: 20px;
+    transition-duration: 0.5s;
+    
+}
+
+.projectContainer button img{
+    width: 40%;
+    height: auto;
+    align-self: center;
+    justify-self: center;
+}
+
+.myProject{
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+    overflow: hidden;
+    border-bottom-left-radius:20px ;
+    border-bottom-right-radius: 20px ;
+}
+
+.buttonOutsideContainer{
+    margin-bottom: 5%;
+    width: 20% !important;
+    align-self: center;
+    padding: 0%;
+    font-size: 80%;
+
+}
+
+.buttonOutsideContainer img{
+    width:40% !important;
+}
+
+
+

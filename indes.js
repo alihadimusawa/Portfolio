@@ -1,40 +1,97 @@
+// Initialize GSAP animations with ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
 
-require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.34.1/min/vs' } });
-require(['vs/editor/editor.main'], function () {
-    // Initialize Monaco Editor
-    monaco.editor.create(document.getElementById('monaco-editor'), {
-        value: `
-        
-        
+// Animate the title
+gsap.from(".title", {
+    opacity: 0,
+    duration: 0.5,
+})
 
-// JavaScript program to check if a number is odd or even
-function checkOddOrEven(number) {
-    if (number % 2 === 0) {
-        console.log(number + ' is an Even number.');
-    } else {
-        console.log(number + ' is an Odd number.');
+gsap.from(".title h1, .title h3", {
+    opacity: 0,
+    delay: 0.5,
+    stagger: 0.2,
+    duration: 0.5,
+})
+
+
+// Animate each element inside the about me section
+gsap.from(".aboutme *, .aboutme", {
+    opacity: 0,
+    y: -100,
+    duration: 2,
+    ease: "power3.out",
+    scrollTrigger: {
+        trigger: ".aboutme *",
+        start: "top top",
+        toggleActions: "play none none none"
     }
-}
-
-// Test the function with a sample number
-checkOddOrEven(5);
-`,
-        language: 'javascript',
-        theme: 'vs-dark',
-        automaticLayout: true, // Automatically adjust the layout
-        scrollBeyondLastLine: false, // Prevent scrolling beyond the content
-        lineNumbers: "off",
-        minimap: { enabled: false }, // Disable the minimap if you want a simpler view
-        wordWrap: "on" // Wrap long lines to prevent horizontal scrolling
-    });
-
-    // Dynamically adjust height based on content
-    const contentHeight = Math.min(300, editor.getContentHeight());
-    document.getElementById('monaco-editor').style.height = contentHeight + "px";
-    editor.layout();
 });
 
+// Animate the proficiency section
+gsap.from(".proficiency", {
+    y: 100,
+    opacity: 0,
+    duration: 1.2,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".proficiency",
+        start: "top 80%",
+        toggleActions: "play none none none"
+    }
+});
 
-gsap.register(scrollTrigger);
+// Animate individual skill icons
+gsap.from(".skillContainer .col", {
+    opacity: 0,
+    scale: 0.5,
+    stagger: 0.2,
+    duration: 1,
+    ease: "back.out(1.7)",
+    scrollTrigger: {
+        trigger: ".skillContainer",
+        start: "top 80%",
+        toggleActions: "play none none none"
+    }
+});
 
-gsap.to("")
+// Animate each element inside the benefits section (workingBenefit)
+gsap.from(".workingBenefit *, .workingBenefit", {
+    opacity: 0,
+    y: -100,
+    duration: 2,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".workingBenefit *, .workingBenefit",
+        start: "top 80%",
+        toggleActions: "play none none none",
+        
+    }
+});
+
+// Animate project showcase
+gsap.from(".projectShowcase h1", {
+    opacity: 0,
+    scale: 0.8,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".projectShowcase h1",
+        start: "top 80%",
+        scrub: true, 
+        toggleActions: "play none none none"
+    }
+});
+
+gsap.from(".projectContainer", {
+    opacity: 0,
+    x: -100,
+    stagger: 0.2,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".projects",
+        start: "top 80%",
+        toggleActions: "play none none none"
+    }
+});

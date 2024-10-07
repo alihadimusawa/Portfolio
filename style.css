@@ -452,10 +452,8 @@ body{
     font-size: 2vw;
     color: #4A4A4A;
     font-weight: 400;
-    align-self: center;
-    position: absolute;
-    top: 1180%;
-    margin-bottom: 10vh;
+    margin-left: 40%;
+    margin-top: 10%;
     transition-duration: 0.2s;
 }
 

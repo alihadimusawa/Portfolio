@@ -1,0 +1,552 @@
+.contactFooter {
+  position: relative;
+  width: 100%;
+  padding: 0 0 28px;
+  color: #e4e3d8;
+  scroll-margin-top: 112px;
+}
+
+.contactShell {
+  position: relative;
+  isolation: isolate;
+  min-width: 0;
+  width: min(90vw, 1240px);
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(216, 215, 202, 0.11);
+  border-radius: 48px;
+  background: linear-gradient(
+    135deg,
+    rgba(144, 161, 232, 0.07),
+    rgba(17, 19, 20, 0.98) 42%,
+    #0c0d0e
+  );
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.28);
+}
+
+.sectionGrid {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background-image: linear-gradient(
+      rgba(216, 215, 202, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(216, 215, 202, 0.025) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: linear-gradient(to bottom, black, transparent 92%);
+}
+
+.sectionGrid::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    112deg,
+    transparent 0 68%,
+    rgba(144, 161, 232, 0.055) 68% 68.12%,
+    transparent 68.12% 100%
+  );
+}
+
+.sectionGlow {
+  position: absolute;
+  right: -13%;
+  bottom: -55%;
+  z-index: -1;
+  width: min(660px, 56vw);
+  aspect-ratio: 1;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(119, 132, 183, 0.15),
+    rgba(119, 132, 183, 0.025) 46%,
+    transparent 70%
+  );
+}
+
+.backdropWord {
+  position: absolute;
+  top: -18px;
+  left: 24px;
+  z-index: -1;
+  pointer-events: none;
+  color: transparent;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: clamp(100px, 16vw, 215px);
+  font-weight: 700;
+  letter-spacing: -0.08em;
+  line-height: 0.85;
+  white-space: nowrap;
+  -webkit-text-stroke: 1px rgba(216, 215, 202, 0.04);
+}
+
+.contactBody {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  grid-template-columns: minmax(0, 1.18fr) minmax(340px, 0.72fr);
+  gap: clamp(48px, 8vw, 110px);
+  padding: clamp(76px, 8vw, 112px) clamp(28px, 6vw, 78px) 72px;
+}
+
+.contactCopy {
+  min-width: 0;
+}
+
+.contactEyebrow {
+  display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin: 0 0 21px;
+  color: rgba(228, 227, 216, 0.82);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.contactEyebrow > span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #7ee2a8;
+  box-shadow: 0 0 0 4px rgba(126, 226, 168, 0.07),
+    0 0 12px rgba(126, 226, 168, 0.68);
+}
+
+.contactCopy h2 {
+  max-width: 790px;
+  margin: 0;
+  color: #efeee5;
+  font-size: clamp(56px, 7vw, 92px);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 0.94;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+
+.contactCopy h2 > span {
+  display: block;
+  width: fit-content;
+  margin-top: 7px;
+  color: #9cabe9;
+  text-shadow: 0 0 28px rgba(144, 161, 232, 0.24);
+}
+
+.contactLead {
+  max-width: 610px;
+  margin: 28px 0 0;
+  color: rgba(228, 227, 216, 0.78);
+  font-size: clamp(20px, 1.6vw, 22px);
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+
+.emailLink {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+  width: min(100%, 580px);
+  min-height: 88px;
+  margin-top: 34px;
+  padding: 15px 19px;
+  border: 1px solid rgba(216, 215, 202, 0.2);
+  border-radius: 18px;
+  background: rgba(216, 215, 202, 0.045);
+  color: #efeee5;
+  text-decoration: none;
+  transition: border-color 180ms ease, background 180ms ease,
+    transform 180ms ease;
+}
+
+.emailLink > svg:first-child {
+  flex: 0 0 auto;
+  color: #a8b5ef;
+}
+
+.emailLink > span {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  line-height: 1.3;
+  font-size: clamp(20px, 1.7vw, 22px);
+  font-weight: 600;
+}
+
+.emailLink small {
+  color: rgba(228, 227, 216, 0.86);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.contactChannels {
+  min-width: 0;
+  align-self: end;
+  padding-left: 26px;
+  border-left: 1px solid rgba(216, 215, 202, 0.11);
+  font-style: normal;
+}
+
+.channelTopline {
+  display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(216, 215, 202, 0.09);
+  color: rgba(168, 181, 239, 0.9);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.45;
+}
+
+.channelTopline span:last-child {
+  color: rgba(228, 227, 216, 0.82);
+}
+
+.channelList {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 15.5rem), 1fr)
+  );
+  gap: 9px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.channelList > li {
+  min-width: 0;
+}
+
+.channelList a {
+  display: grid;
+  width: 100%;
+  min-width: 0;
+  grid-template-columns: 54px minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+  min-height: 94px;
+  padding: 16px;
+  border: 1px solid rgba(216, 215, 202, 0.1);
+  border-radius: 17px;
+  background: rgba(216, 215, 202, 0.025);
+  color: #e4e3d8;
+  text-decoration: none;
+  transition: border-color 180ms ease, background 180ms ease,
+    transform 180ms ease;
+}
+
+.channelIcon {
+  display: grid;
+  flex: 0 0 auto;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border: 1px solid rgba(144, 161, 232, 0.2);
+  border-radius: 13px;
+  background: rgba(144, 161, 232, 0.06);
+  color: #a8b5ef;
+}
+
+.channelIconAsset {
+  border-color: rgba(228, 227, 216, 0.44);
+  background: rgba(239, 238, 229, 0.9);
+  box-shadow: 0 7px 24px rgba(0, 0, 0, 0.16);
+}
+
+.channelIconImage {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.channelList a > span:nth-child(2) {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+}
+
+.channelList small {
+  color: rgba(228, 227, 216, 0.86);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.channelList strong {
+  min-width: 0;
+  color: rgba(239, 238, 229, 0.96);
+  font-size: clamp(19px, 1.4vw, 21px);
+  font-style: normal;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.channelList a > svg {
+  flex: 0 0 auto;
+  color: rgba(228, 227, 216, 0.4);
+}
+
+.footerLine {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 28px;
+  align-items: center;
+  min-width: 0;
+  min-height: 84px;
+  margin: 0 clamp(28px, 6vw, 78px);
+  border-top: 1px solid rgba(216, 215, 202, 0.1);
+}
+
+.footerLine > small,
+.location,
+.backToTop {
+  color: rgba(228, 227, 216, 0.82);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.location,
+.backToTop {
+  display: inline-flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  gap: 7px;
+  align-items: center;
+}
+
+.backToTop {
+  min-height: 44px;
+  padding: 0 8px;
+  color: rgba(228, 227, 216, 0.68);
+  text-decoration: none;
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.emailLink:focus-visible,
+.channelList a:focus-visible,
+.backToTop:focus-visible {
+  outline: 2px solid #90a1e8;
+  outline-offset: 4px;
+}
+
+@media (hover: hover) {
+  .emailLink:hover,
+  .channelList a:hover {
+    border-color: rgba(144, 161, 232, 0.38);
+    background: rgba(144, 161, 232, 0.085);
+    transform: translateY(-2px);
+  }
+
+  .backToTop:hover {
+    color: #a8b5ef;
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 1080px) {
+  .contactBody {
+    grid-template-columns: 1fr;
+    gap: 54px;
+  }
+
+  .contactChannels {
+    align-self: auto;
+    padding: 28px 0 0;
+    border-top: 1px solid rgba(216, 215, 202, 0.11);
+    border-left: 0;
+  }
+
+}
+
+@media (max-width: 640px) {
+  .contactFooter {
+    padding-bottom: 14px;
+  }
+
+  .contactShell {
+    width: calc(100% - 24px);
+    max-width: calc(100vw - 24px);
+    border-radius: 25px;
+  }
+
+  .contactBody {
+    width: 100%;
+    min-width: 0;
+    gap: 44px;
+    padding: 70px 21px 50px;
+  }
+
+  .contactCopy h2 {
+    font-size: clamp(42px, 11.8vw, 54px);
+  }
+
+  .contactCopy h2 > span {
+    width: 100%;
+    max-width: 290px;
+    text-wrap: wrap;
+  }
+
+  .contactLead {
+    font-size: 20px;
+  }
+
+  .emailLink {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .emailLink > svg:last-child {
+    display: none;
+  }
+
+  .footerLine {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px 20px;
+    min-height: 0;
+    margin: 0 21px;
+    padding: 25px 0;
+  }
+
+  .footerLine > small {
+    width: 100%;
+  }
+
+  .backToTop {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .contactShell {
+    width: calc(100% - 12px);
+    max-width: calc(100vw - 12px);
+    border-radius: 20px;
+  }
+
+  .backdropWord {
+    top: -8px;
+    left: 14px;
+    font-size: clamp(76px, 29vw, 110px);
+  }
+
+  .contactBody {
+    gap: 38px;
+    padding: 58px 16px 40px;
+  }
+
+  .contactEyebrow {
+    gap: 8px;
+    margin-bottom: 17px;
+  }
+
+  .contactCopy h2 {
+    font-size: clamp(38px, 13vw, 48px);
+    line-height: 0.98;
+  }
+
+  .contactCopy h2 > span {
+    max-width: 100%;
+  }
+
+  .contactLead {
+    margin-top: 23px;
+    line-height: 1.6;
+  }
+
+  .emailLink {
+    gap: 10px;
+    min-height: 76px;
+    margin-top: 28px;
+    padding: 12px;
+    border-radius: 15px;
+  }
+
+  .emailLink > span {
+    font-size: clamp(18px, 5.2vw, 20px);
+  }
+
+  .contactChannels {
+    padding-top: 23px;
+  }
+
+  .channelList a {
+    grid-template-columns: 44px minmax(0, 1fr) auto;
+    gap: 10px;
+    min-height: 76px;
+    padding: 12px;
+    border-radius: 15px;
+  }
+
+  .channelIcon {
+    width: 44px;
+    height: 44px;
+    border-radius: 11px;
+  }
+
+  .channelIconImage {
+    width: 24px;
+    height: 24px;
+  }
+
+  .channelList strong {
+    font-size: 19px;
+    line-height: 1.35;
+  }
+
+  .footerLine {
+    gap: 8px 12px;
+    margin: 0 16px;
+    padding: 22px 0;
+  }
+
+  .location {
+    flex: 1 1 150px;
+  }
+
+  .backToTop {
+    flex: 0 0 auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .emailLink,
+  .channelList a,
+  .backToTop {
+    transition-duration: 0.01ms;
+  }
+}

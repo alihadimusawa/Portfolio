@@ -1,0 +1,416 @@
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 16px clamp(18px, 4vw, 54px);
+  pointer-events: none;
+}
+
+.shell {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(150px, auto) minmax(0, 1fr) auto;
+  gap: clamp(14px, 1.8vw, 24px);
+  align-items: center;
+  width: min(1180px, 100%);
+  min-height: 68px;
+  margin: 0 auto;
+  padding: 10px 12px 10px 22px;
+  overflow: hidden;
+  pointer-events: auto;
+  border: 1px solid rgba(216, 215, 202, 0.13);
+  border-radius: 999px;
+  background: rgba(14, 15, 15, 0.66);
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(18px) saturate(125%);
+  -webkit-backdrop-filter: blur(18px) saturate(125%);
+  transition: min-height 260ms ease, background 260ms ease,
+    border-color 260ms ease, box-shadow 260ms ease;
+}
+
+.shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    105deg,
+    rgba(255, 255, 255, 0.04),
+    transparent 28%,
+    transparent 72%,
+    rgba(119, 132, 183, 0.07)
+  );
+}
+
+.scrolled .shell {
+  min-height: 60px;
+  border-color: rgba(216, 215, 202, 0.22);
+  background: rgba(10, 11, 11, 0.88);
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.35);
+}
+
+.skipLink {
+  position: fixed;
+  top: 10px;
+  left: 18px;
+  z-index: 3;
+  padding: 10px 14px;
+  pointer-events: auto;
+  border-radius: 10px;
+  background: #d8d7ca;
+  color: #0e0f0f;
+  font-size: 13px;
+  font-weight: 700;
+  transform: translateY(-160%);
+  transition: transform 180ms ease;
+}
+
+.skipLink:focus {
+  transform: translateY(0);
+}
+
+.brand {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  width: fit-content;
+  min-width: 0;
+  min-height: 44px;
+  color: #d8d7ca;
+}
+
+.brandLogo {
+  width: clamp(142px, 14vw, 178px);
+  max-width: 100%;
+  height: auto;
+  opacity: 0.92;
+  filter: drop-shadow(0 0 12px rgba(216, 215, 202, 0.16));
+  transition: opacity 220ms ease, filter 220ms ease;
+}
+
+.brand:hover .brandLogo {
+  opacity: 1;
+  filter: drop-shadow(0 0 16px rgba(216, 215, 202, 0.36));
+}
+
+.brandSignal {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #90a1e8;
+  box-shadow: 0 0 0 4px rgba(144, 161, 232, 0.08),
+    0 0 12px rgba(144, 161, 232, 0.8);
+}
+
+.desktopNav {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-width: 0;
+  gap: clamp(8px, 1.4vw, 22px);
+  align-items: center;
+  justify-content: center;
+}
+
+.navLink {
+  position: relative;
+  display: inline-flex;
+  gap: 7px;
+  align-items: center;
+  min-height: 44px;
+  padding: 9px 8px;
+  color: rgba(216, 215, 202, 0.66);
+  font-size: 13px;
+  font-weight: 550;
+  text-decoration: none;
+  transition: color 220ms ease;
+}
+
+.navLink > span {
+  color: rgba(144, 161, 232, 0.62);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  right: 8px;
+  bottom: 2px;
+  left: 8px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #90a1e8, transparent);
+  box-shadow: 0 0 8px rgba(144, 161, 232, 0.62);
+  opacity: 0;
+  transform: scaleX(0.25);
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.navLink:hover,
+.activeLink {
+  color: #efeee4;
+}
+
+.navLink:hover::after,
+.activeLink::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.contactLink {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid rgba(216, 215, 202, 0.7);
+  border-radius: 999px;
+  background: #d8d7ca;
+  color: #111313;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 0 0 rgba(216, 215, 202, 0);
+  transition: color 220ms ease, background 220ms ease,
+    box-shadow 220ms ease, transform 220ms ease;
+}
+
+.contactLink:hover {
+  background: transparent;
+  color: #efeee4;
+  box-shadow: 0 0 22px rgba(216, 215, 202, 0.14);
+  transform: translateY(-1px);
+}
+
+.menuButton {
+  position: relative;
+  z-index: 2;
+  display: none;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgba(216, 215, 202, 0.18);
+  border-radius: 50%;
+  background: rgba(216, 215, 202, 0.06);
+  color: #efeee4;
+  touch-action: manipulation;
+}
+
+.pageProgress {
+  position: absolute;
+  right: 28px;
+  bottom: 0;
+  left: 28px;
+  z-index: 2;
+  height: 1px;
+  pointer-events: none;
+  background: linear-gradient(90deg, #d8d7ca, #90a1e8);
+  box-shadow: 0 0 12px rgba(144, 161, 232, 0.7);
+  transform-origin: left center;
+}
+
+.mobilePanel {
+  width: min(520px, 100%);
+  max-height: calc(100dvh - 104px - env(safe-area-inset-bottom));
+  margin: 10px auto 0;
+  padding: 12px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  pointer-events: auto;
+  border: 1px solid rgba(216, 215, 202, 0.15);
+  border-radius: 24px;
+  background: rgba(10, 11, 11, 0.94);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.48);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.mobilePanel nav {
+  display: grid;
+  gap: 4px;
+}
+
+.mobilePanel nav a {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  min-height: 48px;
+  padding: 10px 16px;
+  border-radius: 14px;
+  color: rgba(239, 238, 228, 0.7);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 180ms ease, background 180ms ease;
+}
+
+.mobilePanel nav a > span {
+  color: #90a1e8;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 10px;
+}
+
+.mobilePanel nav a:hover,
+.mobilePanel nav .mobileActiveLink {
+  background: rgba(144, 161, 232, 0.09);
+  color: #efeee4;
+}
+
+.mobileAvailability {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  min-height: 44px;
+  margin-top: 8px;
+  padding: 14px 16px 4px;
+  border-top: 1px solid rgba(216, 215, 202, 0.1);
+  color: rgba(216, 215, 202, 0.54);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+.mobileAvailability > span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #7ee2a8;
+  box-shadow: 0 0 10px rgba(126, 226, 168, 0.65);
+}
+
+.brand:focus-visible,
+.navLink:focus-visible,
+.contactLink:focus-visible,
+.menuButton:focus-visible,
+.mobilePanel a:focus-visible {
+  outline: 2px solid #90a1e8;
+  outline-offset: 4px;
+}
+
+@media (min-width: 1081px) and (max-width: 1240px) {
+  .shell {
+    grid-template-columns: minmax(140px, auto) minmax(0, 1fr) auto;
+    gap: 12px;
+    padding-left: 18px;
+  }
+
+  .brandLogo {
+    width: 142px;
+  }
+
+  .desktopNav {
+    gap: 2px;
+  }
+
+  .navLink {
+    gap: 0;
+    padding-right: 7px;
+    padding-left: 7px;
+    font-size: 12px;
+  }
+
+  .navLink > span {
+    display: none;
+  }
+
+  .contactLink {
+    padding: 0 14px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .header {
+    padding: max(12px, env(safe-area-inset-top))
+      max(14px, env(safe-area-inset-right)) 12px
+      max(14px, env(safe-area-inset-left));
+  }
+
+  .shell {
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    min-height: 60px;
+    padding: 8px 9px 8px 18px;
+    background: rgba(14, 15, 15, 0.94);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .mobilePanel {
+    background: rgba(10, 11, 11, 0.98);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .desktopNav,
+  .contactLink {
+    display: none;
+  }
+
+  .menuButton {
+    display: grid;
+  }
+
+  .brandLogo {
+    width: 150px;
+  }
+}
+
+@media (min-width: 1081px) {
+  .mobilePanel {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .header {
+    padding-right: max(10px, env(safe-area-inset-right));
+    padding-left: max(10px, env(safe-area-inset-left));
+  }
+
+  .shell {
+    padding: 7px 8px 7px 14px;
+  }
+
+  .brandLogo {
+    width: 132px;
+  }
+
+  .brandSignal {
+    display: none;
+  }
+
+  .mobilePanel {
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 20px;
+  }
+
+  .mobilePanel nav a {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .mobileAvailability {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shell,
+  .skipLink,
+  .brandLogo,
+  .navLink,
+  .navLink::after,
+  .contactLink {
+    transition-duration: 0.01ms;
+  }
+}

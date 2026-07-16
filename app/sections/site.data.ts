@@ -111,7 +111,7 @@ export const heroContent = {
     accent: "Innovate.",
   },
   introduction:
-    "I'm Ali—a product-minded software engineer who turns complex ideas into reliable, scalable digital experiences built to last.",
+    "Hi, im Ali, and yes, i created this myself.",
   resumeActionLabel: "View my résumé",
   emailActionLabel: "Start a conversation",
   stackLabel: "Selected stack",

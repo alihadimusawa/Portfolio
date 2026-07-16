@@ -49,6 +49,8 @@ const revealItem: Variants = {
   },
 };
 
+const dataChipDepth = 50;
+
 export default function HomeSection() {
   const heroRef = useRef<HTMLElement>(null);
   const prefersReducedMotion = useReducedMotion();
@@ -250,6 +252,7 @@ export default function HomeSection() {
 
         <motion.div
           className={`${styles.dataChip} ${styles.primaryChip}`}
+          style={{ z: dataChipDepth }}
           initial={prefersReducedMotion ? false : { opacity: 1, x: 20, y: 10 }}
           animate={{ opacity: 1, x: 0, y: 0 }}
           transition={{ duration: 0.32, delay: 0.28, ease: "easeOut" }}
@@ -266,6 +269,7 @@ export default function HomeSection() {
 
         <motion.div
           className={`${styles.dataChip} ${styles.secondaryChip}`}
+          style={{ z: dataChipDepth }}
           initial={prefersReducedMotion ? false : { opacity: 1, x: -20, y: -8 }}
           animate={{ opacity: 1, x: 0, y: 0 }}
           transition={{ duration: 0.32, delay: 0.34, ease: "easeOut" }}

@@ -486,7 +486,6 @@
   font-size: 10px;
   box-shadow: 0 18px 38px rgba(0, 0, 0, 0.32);
   backdrop-filter: blur(15px);
-  transform: translateZ(50px);
 }
 
 .dataChip > span:last-child {

@@ -66,9 +66,9 @@ export const experiences = [
       current: true,
     },
     highlights: [
-      "Developed backend services to transform raw POS transaction data into standardized formats compatible with government tax systems.",
-      "Implemented data processing pipelines to validate, transform, and prepare transaction data before submission to external government platforms.",
-      "Maintained data integrity and consistency throughout the transaction processing workflow.",
+      "Converted POS transactions into government-ready tax data.",
+      "Built pipelines to validate data before submission.",
+      "Kept transaction data accurate and consistent.",
     ],
     technologies: ["PHP", "FileZilla", "Terminus", "MySQL"],
     logo: {
@@ -85,10 +85,10 @@ export const experiences = [
       end: { dateTime: "2026-07", label: "July 2026" },
     },
     highlights: [
-      "Collaborated with the Singapore engineering team in an English-speaking, cross-functional environment.",
-      "Developed and integrated a push notification system using Firebase Cloud Messaging (FCM).",
-      "Designed and implemented a tagging feature integrated with third-party APIs, increasing workflow efficiency by 60% and reducing operational costs by 50%.",
-      "Wrote unit tests to ensure code quality, improve reliability, and reduce regressions.",
+      "Worked with a Singapore-based engineering team.",
+      "Built push notifications with Firebase Cloud Messaging.",
+      "Built API-powered tagging, improving efficiency by 60% and cutting costs by 50%.",
+      "Added unit tests to prevent regressions.",
     ],
     technologies: [
       "Docker",
@@ -114,8 +114,8 @@ export const experiences = [
       end: { dateTime: "2024-12", label: "Dec 2024" },
     },
     highlights: [
-      "Built a hotel management website from the ground up.",
-      "Designed the application around the PERN stack.",
+      "Built a hotel management website from scratch.",
+      "Used the PERN stack.",
     ],
     technologies: [
       "PostgreSQL",

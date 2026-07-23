@@ -17,6 +17,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: siteMetadata.title,
   description: siteMetadata.description,
+  icons: {
+    icon: {
+      url: "/image/skillview-mark.svg",
+      type: "image/svg+xml",
+    },
+  },
 };
 
 export default function RootLayout({

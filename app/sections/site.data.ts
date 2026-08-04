@@ -29,7 +29,7 @@ export const siteIdentity = {
   role: "Software engineer",
   email: "alihadishp@gmail.com",
   resumeUrl:
-    "https://drive.google.com/file/d/1_URuAXv-LKDiOvWKAZ5hQjb-fxChzjB3/view?usp=sharing",
+    "https://drive.google.com/file/d/1_hJMKX5bak-BXuEqiWAPcjr6c_O2oSNb/view?usp=sharing",
   location: {
     city: "Jakarta",
     country: "Indonesia",

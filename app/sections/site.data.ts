@@ -43,8 +43,8 @@ export const siteIdentity = {
     imageHeight: 20,
   },
   portrait: {
-    imageSrc: "/image/ali-profile.webp",
-    alt: "Ali Hadi Musawa in Myeongdong, Seoul",
+    imageSrc: "/image/ali-profile2.JPG",
+    alt: "Portrait of Ali Hadi Musawa",
     caption: "Software engineer / 2026",
   },
 } as const;

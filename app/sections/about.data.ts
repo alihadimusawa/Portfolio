@@ -18,6 +18,8 @@ export type Credential = Readonly<{
   visualSegments: number;
   status?: string;
   certificate?: Readonly<{
+    /** Set to false to keep the certificate data without showing its link. */
+    visible?: boolean;
     label: string;
     href: string;
   }>;
@@ -142,6 +144,7 @@ export const credentials: readonly Credential[] = [
     visualSegments: 9,
     status: "Certificate link available",
     certificate: {
+      visible: false,
       label: "View IELTS certificate",
       href: "https://ielts.idp.com/vietnam/about/news-and-articles/article-toeic-and-ielts-level/en-gb",
     },

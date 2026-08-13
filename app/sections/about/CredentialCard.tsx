@@ -26,6 +26,10 @@ export default function CredentialCard({
     "--score-segment-count": segmentCount,
   } as CSSProperties;
   const filledSegments = normalizedScore * segmentCount;
+  const visibleCertificate =
+    credential.certificate?.visible === false
+      ? undefined
+      : credential.certificate;
 
   return (
     <div className={styles.languageContent}>
@@ -87,14 +91,14 @@ export default function CredentialCard({
           </div>
         ) : null}
 
-        {credential.certificate ? (
+        {visibleCertificate ? (
           <a
             className={styles.credentialLink}
-            href={credential.certificate.href}
+            href={visibleCertificate.href}
             target="_blank"
             rel="noreferrer"
           >
-            <span>{credential.certificate.label}</span>
+            <span>{visibleCertificate.label}</span>
             <ArrowUpRight size={15} strokeWidth={1.8} aria-hidden="true" />
           </a>
         ) : null}
